@@ -2,6 +2,13 @@
 let manScore = 0;
 let computerScore = 0;
 
+/*HTML elements*/
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+const manScoreText = document.querySelector('.manScore');
+const computerScoreText = document.querySelector('.computerScore');
+
 /*Helper function to get the computers answer*/
 function getComputerChoice() {
   if (Math.ceil(Math.random() * 3) === 1) {
@@ -35,11 +42,26 @@ function playRound(playerSelection, computerSelection) {
 }
 
 /*Choices values*/
-let playerSelection = 'Rock';
+// let playerSelection = 'Rock';
+let playerSelection = undefined;
+
+rock.addEventListener('click', () => {
+  playerSelection = 'Rock';
+  getComputerChoice();
+  game();
+});
+paper.addEventListener('click', () => {
+  playerSelection = 'Paper';
+  getComputerChoice();
+  game();
+});
+scissors.addEventListener('click', () => {
+  playerSelection = 'Scissors';
+  getComputerChoice();
+  game();
+});
+
 let computerSelection = getComputerChoice();
-const manScoreText = document.querySelector('.manScore');
-const computerScoreText = document.querySelector('.computerScore');
-const rock = document.querySelector('#rock');
 
 // console.log(playerSelection, computerSelection);
 
@@ -47,11 +69,9 @@ function game() {
   playRound(playerSelection, computerSelection);
   // console.log('man ' + manScore);
   manScoreText.innerText = `${manScore}`;
-  computerScoreText.innerText = `${computerScore}`;
   // console.log('computer ' + computerScore);
+  computerScoreText.innerText = `${computerScore}`;
 }
 
 let result = game();
 console.log(result);
-
-rock.addEventListener('click', game);
