@@ -1,5 +1,8 @@
-// alert('Tell me something');
+/*Scores*/
+let manScore = 0;
+let computerScore = 0;
 
+/*Helper function to get the computers answer*/
 function getComputerChoice() {
   if (Math.ceil(Math.random() * 3) === 1) {
     return 'Rock';
@@ -10,35 +13,45 @@ function getComputerChoice() {
   }
 }
 
+/*Checks who wins the round*/
 function playRound(playerSelection, computerSelection) {
-  // console.log(playerSelection, computerSelection);
+  console.log(playerSelection, computerSelection);
+
   if (playerSelection === 'Rock' && computerSelection === 'Paper') {
-    return 'Computer wins';
+    computerScore += 1;
   } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
-    return 'Player wins';
+    manScore += 1;
   } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
-    return 'Computer wins';
+    computerScore += 1;
   } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
-    return 'Player wins';
+    manScore += 1;
   } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
-    return 'Computer wins';
+    computerScore += 1;
   } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
-    return 'Player wins';
+    manScore += 1;
   } else if (playerSelection === computerSelection) {
-    return 'Draw';
+    // return 'Draw';
   }
 }
 
-const playerSelection = 'Rock';
-const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));
+/*Choices values*/
+let playerSelection = 'Rock';
+let computerSelection = getComputerChoice();
+const manScoreText = document.querySelector('.manScore');
+const computerScoreText = document.querySelector('.computerScore');
+const rock = document.querySelector('#rock');
+
+// console.log(playerSelection, computerSelection);
 
 function game() {
-  for (let i = 1; i <= 5; i++) {
-    console.log(playRound(playerSelection, computerSelection));
-  }
+  playRound(playerSelection, computerSelection);
+  // console.log('man ' + manScore);
+  manScoreText.innerText = `${manScore}`;
+  computerScoreText.innerText = `${computerScore}`;
+  // console.log('computer ' + computerScore);
 }
 
 let result = game();
-
 console.log(result);
+
+rock.addEventListener('click', game);

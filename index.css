@@ -44,3 +44,8 @@ img:active {
   min-width: 130px;
   height: 130px;
 }
+
+.score-number {
+  line-height: 100px;
+  font-size: 40px;
+}

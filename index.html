@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="./manvscpu.ico" />
     <title>Rock paper scissors</title>
   </head>
   <body>
@@ -16,21 +17,31 @@
     </div>
     <div class="weapons">
       <img
+        id="rock"
         src="https://lookingcoolonavespa.github.io/rock-paper-scissors/cave-painting.png"
         alt="rock"
       />
       <img
+        class="paper"
         src="https://lookingcoolonavespa.github.io/rock-paper-scissors/document.png"
         alt="paper"
       />
       <img
+        class="scissors"
         src="https://lookingcoolonavespa.github.io/rock-paper-scissors/scissors-opened-tool-shape.png"
         alt="scissors"
       />
     </div>
     <div class="score">
-      <div class="me">man</div>
-      <div class="computer">computer</div>
+      <div class="me">
+        man
+        <div class="manScore score-number">0</div>
+      </div>
+      <div class="computer">
+        computer
+
+        <div class="computerScore score-number">0</div>
+      </div>
     </div>
   </body>
 </html>
