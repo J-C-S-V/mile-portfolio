@@ -22,19 +22,15 @@ function computerChoice() {
   }
 }
 function checkWhoWinsTheRound(playerSelection, computerSelection) {
-  if (playerSelection === 'Rock' && computerSelection === 'Paper') {
+  if (
+    (playerSelection === 'Rock' && computerSelection === 'Paper') ||
+    (playerSelection === 'Paper' && computerSelection === 'Scissors') ||
+    (playerSelection === 'Scissors' && computerSelection === 'Rock')
+  ) {
     computerScore += 1;
-  } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
-    manScore += 1;
-  } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
-    computerScore += 1;
-  } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
-    manScore += 1;
-  } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
-    computerScore += 1;
-  } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
-    manScore += 1;
   } else if (playerSelection === computerSelection) {
+  } else {
+    manScore += 1;
   }
 }
 function game() {
@@ -43,7 +39,7 @@ function game() {
   computerScoreText.innerText = `${computerScore}`;
 }
 function gameOver() {
-  if (manScore === 2) {
+  if (manScore === 5) {
     body.innerText = 'You won!!!!!!!!!!!';
     body.style.lineHeight = '500px';
     body.style.fontSize = '100px';
@@ -52,7 +48,7 @@ function gameOver() {
     body.style.display = 'grid';
     buttonTryAgain.style.width = '200px';
     buttonTryAgain.style.margin = '0 auto';
-  } else if (computerScore === 2) {
+  } else if (computerScore === 5) {
     body.innerText = 'You lose :c';
     body.style.lineHeight = '500px';
     body.style.fontSize = '100px';

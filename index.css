@@ -1,68 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
+:root {
+  --main-color-white: rgb(255, 255, 255);
+  --main-color-purple: rgb(108, 0, 196);
+}
+
 * {
   font-family: lacquer, Arial, sans-serif;
   background-color: black;
-  color: white;
+  color: var(--main-color-white);
   text-align: center;
 }
-
 body {
-  transition: 2s;
-
   animation-name: zoom;
   animation-duration: 1s;
+  transition: 2s;
 }
-
 @keyframes zoom {
   0% {
     transform: scale(0.5);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 h1 {
   font-size: 3rem;
 }
-
 img {
-  border: 2px solid white;
+  border: 2px solid var(--main-color-white);
+  border-radius: 10px;
   padding: 8px;
   width: 150px;
   cursor: pointer;
   margin: 10px;
 }
-
 img:hover {
   transform: scale(1.05);
-  box-shadow: rgb(255, 255, 255) 0px 0px 8px 5px;
+  box-shadow: var(--main-color-white) 0px 0px 8px 5px;
   transition: 0.2s;
 }
-
 img:active {
-  box-shadow: rgb(203, 71, 71) 0px 0px 8px 5px;
+  box-shadow: var(--main-color-purple) 0px 0px 8px 5px;
 }
-
 .score {
   display: grid;
   grid-auto-flow: column;
-  border: 1px solid white;
+  border: 2px solid var(--main-color-white);
+  border-radius: 10px;
   height: 200px;
-  justify-content: center;
 }
-
 .me,
 .computer {
-  border: 1px solid white;
+  border: 5px double var(--main-color-white);
+  border-radius: 10px;
   margin: 30px;
-  min-width: 130px;
   height: 140px;
 }
-
 .score-number {
   line-height: 100px;
-  font-size: 40px;
+  font-size: 60px;
 }
