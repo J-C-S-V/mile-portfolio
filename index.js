@@ -10,8 +10,9 @@ const computerScoreText = document.querySelector('.computerScore');
 const manResult = document.querySelector('#man-result');
 const computerResult = document.querySelector('#computer-result');
 const body = document.querySelector('body');
-/*Helper function to get the computers answer*/
-function getComputerChoice() {
+const buttonTryAgain = document.createElement('button');
+
+function computerChoice() {
   if (Math.ceil(Math.random() * 3) === 1) {
     return 'Rock';
   } else if (Math.ceil(Math.random() * 3) === 2) {
@@ -20,9 +21,7 @@ function getComputerChoice() {
     return 'Scissors';
   }
 }
-/*Checks who wins the round*/
-function playRound(playerSelection, computerSelection) {
-  console.log(playerSelection, computerSelection);
+function checkWhoWinsTheRound(playerSelection, computerSelection) {
   if (playerSelection === 'Rock' && computerSelection === 'Paper') {
     computerScore += 1;
   } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
@@ -38,14 +37,39 @@ function playRound(playerSelection, computerSelection) {
   } else if (playerSelection === computerSelection) {
   }
 }
-
+function game() {
+  checkWhoWinsTheRound(playerSelection, computerSelection);
+  manScoreText.innerText = `${manScore}`;
+  computerScoreText.innerText = `${computerScore}`;
+}
+function gameOver() {
+  if (manScore === 2) {
+    body.innerText = 'You won!!!!!!!!!!!';
+    body.style.lineHeight = '500px';
+    body.style.fontSize = '100px';
+    buttonTryAgain.innerText = 'Try again';
+    document.body.appendChild(buttonTryAgain);
+    body.style.display = 'grid';
+    buttonTryAgain.style.width = '200px';
+    buttonTryAgain.style.margin = '0 auto';
+  } else if (computerScore === 2) {
+    body.innerText = 'You lose :c';
+    body.style.lineHeight = '500px';
+    body.style.fontSize = '100px';
+    buttonTryAgain.innerText = 'Try again';
+    document.body.appendChild(buttonTryAgain);
+    body.style.display = 'grid';
+    buttonTryAgain.style.width = '200px';
+    buttonTryAgain.style.margin = '0 auto';
+  }
+}
 /*Choices values*/
-let playerSelection = undefined;
-let computerSelection = getComputerChoice();
+let playerSelection;
+let computerSelection = computerChoice();
 
 rock.addEventListener('click', () => {
   playerSelection = 'Rock';
-  computerSelection = getComputerChoice();
+  computerSelection = computerChoice();
   game();
   manResult.innerText = playerSelection;
   computerResult.innerText = computerSelection;
@@ -53,7 +77,7 @@ rock.addEventListener('click', () => {
 });
 paper.addEventListener('click', () => {
   playerSelection = 'Paper';
-  computerSelection = getComputerChoice();
+  computerSelection = computerChoice();
   game();
   manResult.innerText = playerSelection;
   computerResult.innerText = computerSelection;
@@ -61,27 +85,15 @@ paper.addEventListener('click', () => {
 });
 scissors.addEventListener('click', () => {
   playerSelection = 'Scissors';
-  computerSelection = getComputerChoice();
+  computerSelection = computerChoice();
   game();
   manResult.innerText = playerSelection;
   computerResult.innerText = computerSelection;
   gameOver();
 });
-
-function game() {
-  playRound(playerSelection, computerSelection);
-  manScoreText.innerText = `${manScore}`;
-  computerScoreText.innerText = `${computerScore}`;
-}
-
-function gameOver() {
-  if (manScore === 10) {
-    body.innerText = 'You won!!!!!!!!!!!';
-    body.style.lineHeight = '500px';
-    body.style.fontSize = '100px';
-  } else if (computerScore === 10) {
-    body.innerText = 'You lose :c';
-    body.style.lineHeight = '500px';
-    body.style.fontSize = '100px';
-  }
-}
+//Try again button listener
+buttonTryAgain.addEventListener('click', () => {
+  setInterval(() => {
+    location.reload();
+  }, 1);
+});

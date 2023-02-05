@@ -7,6 +7,23 @@
   text-align: center;
 }
 
+body {
+  transition: 2s;
+
+  animation-name: zoom;
+  animation-duration: 1s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -42,7 +59,7 @@ img:active {
   border: 1px solid white;
   margin: 30px;
   min-width: 130px;
-  height: 130px;
+  height: 140px;
 }
 
 .score-number {
