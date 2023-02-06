@@ -3,13 +3,20 @@
 :root {
   --main-color-white: rgb(255, 255, 255);
   --main-color-purple: rgb(108, 0, 196);
+  --main-color-black: rgb(0, 0, 0);
 }
-
 * {
   font-family: lacquer, Arial, sans-serif;
-  background-color: black;
+  background-color: var(--main-color-black);
   color: var(--main-color-white);
   text-align: center;
+}
+button {
+  border: 3px solid var(--main-color-white);
+}
+button:active {
+  color: var(--main-color-black);
+  background-color: var(--main-color-white);
 }
 body {
   animation-name: zoom;

@@ -88,8 +88,12 @@ scissors.addEventListener('click', () => {
   gameOver();
 });
 //Try again button listener
+// buttonTryAgain.addEventListener('click', () => {
+//   setInterval(() => {
+//     location.reload();
+//   }, 10);
+// });
+
 buttonTryAgain.addEventListener('click', () => {
-  setInterval(() => {
-    location.reload();
-  }, 1);
+  location.reload();
 });
