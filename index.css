@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
 :root {
-  /* --main-color-white: rgb(255, 255, 255); */
-  /* --main-color-purple: rgb(108, 0, 196); */
-  /* --main-color-black: rgb(0, 0, 0); */
+  --main-color-white: rgb(255, 255, 255);
+  --main-color-purple: rgb(108, 0, 196);
+  --main-color-black: rgb(0, 0, 0);
 }
 * {
   font-family: lacquer, Arial, sans-serif;
