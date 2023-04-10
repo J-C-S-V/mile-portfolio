@@ -68,3 +68,15 @@ img:active {
   line-height: 100px;
   font-size: 60px;
 }
+
+@media screen and (max-width: 768px) {
+  .weapons > img {
+    width: 18%;
+    margin-bottom: 15%;
+  }
+
+  .score-number {
+    line-height: 70px;
+    font-size: 40px;
+  }
+}
