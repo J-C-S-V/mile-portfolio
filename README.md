@@ -1,14 +1,10 @@
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./rock_paper_scissors_img.png" alt="logo" width="450"  height="auto" />
   <br/>
-
-  <h3><b>[/*TITLE]</b></h3>
-
 </div>
 
-# [/*TITLE]
-
+# [Rock Paper Scissors game]
+This is a simple game of rock paper scissors built using JavaScript. The user plays against the computer and the first player to reach a score of 5 wins the game. The game allows the user to choose between three options: rock, paper, or scissors. The computer generates a random choice, and the winner of each round is determined based on the traditional rules of the game.
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -34,9 +30,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [/*TITLE] <a name="about-project"></a>
+# 📖 [/Rock Paper Scissors game] <a name="about-project"></a>
 
-**[/*TITLE]** is my first project with Microverse 😀. Here we'll see a very basic web page using the standards of the industry 💻
+**[Rock Paper Scissors game]** This is a simple game of rock paper scissors built using JavaScript. The user plays against the computer and the first player to reach a score of 5 wins the game. The game allows the user to choose between three options: rock, paper, or scissors. The computer generates a random choice, and the winner of each round is determined based on the traditional rules of the game.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,13 +41,13 @@
 <details>
   <summary>Languages and technologies</summary>
   <ul>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+    <ul>
     <li><a href="#">HTML</a></li>
   </ul>
     <ul>
     <li><a href="#">CSS3</a></li>
-  </ul>
-    <ul>
-    <li><a href="#">VScode</a></li>
   </ul>
     <ul>
     <li><a href="#">Git and GitHub</a></li>
@@ -63,8 +59,8 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Easy navigation]**
-- **[Personalized product]**
-- **[Secure payment processing]**
+- **[Mobile first]**
+- **[SPA (Single Page Application)]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,7 +68,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://j-c-s-v.github.io/Portfolio-setup-and-mobile-first/)
+- [Live Demo Link](https://luxury-swan-136d4f.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,9 +131,9 @@ GitHub pages
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Payment]**
+- [ ] **[Animations]**
+- [ ] **[Difficulty section]**
 - [ ] **[Footer]**
-- [ ] **[Profile picture]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
