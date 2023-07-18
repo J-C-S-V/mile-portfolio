@@ -1,0 +1,87 @@
+:root {
+  --primary-black: #000;
+  --primary-white: #fff;
+  --secondary-white: #e2e2e2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-black);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: var(--primary-white);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-white);
+}
+
+.nav_lis-a:hover {
+  text-decoration: underline;
+  color: var(--secondary-white);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transform: scale(0.9);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 7rem;
+  align-items: center;
+  background-color: red;
+}
+
+.nav_img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  /* background-color: blue; */
+}
+
+.nav_ul {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: yellow; */
+}
+
+.nav_lis {
+  padding: 10px 40px;
+}
+
+.main {
+  height: 100vh;
+  background-image: url('./assets/background.png');
+  background-repeat: no-repeat;
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  background-image: -webkit-linear-gradient(
+      bottom,
+      rgb(0 0 0 / 70%),
+      rgb(149 33 33 / 70%)
+    ),
+    url('./assets/background.png');
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('./assets/background.png');
+  /* background-size: cover; */
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
