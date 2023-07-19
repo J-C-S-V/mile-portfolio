@@ -1,7 +1,9 @@
 :root {
   --primary-black: #000;
+  --secondary-black: #333;
   --primary-white: #fff;
   --secondary-white: #e2e2e2;
+  --primary-pink: #df9caa;
 }
 
 *,
@@ -11,6 +13,8 @@
   margin: 0;
   padding: 0;
 }
+
+/* Hero section */
 
 body {
   background-color: var(--primary-black);
@@ -26,6 +30,7 @@ ul {
 a {
   text-decoration: none;
   color: var(--primary-white);
+  display: inline-flex;
 }
 
 .nav_lis-a:hover {
@@ -33,7 +38,7 @@ a {
   color: var(--secondary-white);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
-  transform: scale(0.9);
+  transform: scale(1.1);
 }
 
 .nav {
@@ -41,20 +46,18 @@ a {
   justify-content: space-between;
   padding: 1rem 7rem;
   align-items: center;
-  background-color: red;
+  background-color: transparent;
 }
 
 .nav_img {
   display: block;
   width: 50px;
   height: 50px;
-  /* background-color: blue; */
 }
 
 .nav_ul {
   display: flex;
   justify-content: space-around;
-  /* background-color: yellow; */
 }
 
 .nav_lis {
@@ -62,13 +65,12 @@ a {
 }
 
 .main {
-  height: 100vh;
-  background-image: url('./assets/background.png');
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   position: relative;
-  height: 80vh;
-  min-height: 600px;
-  background-image: -webkit-linear-gradient(
+  height: 100vh;
+  background-image: linear-gradient(
       bottom,
       rgb(0 0 0 / 70%),
       rgb(149 33 33 / 70%)
@@ -80,8 +82,87 @@ a {
       rgba(0, 0, 0, 0.7)
     ),
     url('./assets/background.png');
-  /* background-size: cover; */
-  background-position: center;
+  background-size: cover;
+  background-position: 170px 50px;
   background-attachment: fixed;
-  color: #fff;
 }
+
+.section {
+  margin: 10rem 30rem 5rem 10rem;
+  line-height: 3rem;
+  color: var(--secondary-white);
+}
+
+.section_h1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.section_ul {
+  display: flex;
+}
+
+.section_lis {
+  padding: 0 2rem 0 0;
+}
+
+.section_svg {
+  color: var(--primary-pink);
+  width: 35;
+  height: 35;
+}
+
+.section_a {
+  border: 1px solid var(--primary-pink);
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.section_a:hover,
+.section_svg:hover {
+  background-color: var(--primary-pink);
+  color: var(--primary-black);
+}
+
+.section_h2 {
+  padding-bottom: 2rem;
+}
+
+.section_h3 {
+  letter-spacing: 5px;
+  padding-bottom: 2rem;
+}
+
+.section_btn-2 {
+  border-radius: 10px;
+  color: var(--primary-black);
+  font-size: 2rem;
+  align-self: center;
+  background-color: var(--primary-pink);
+  border: 0 solid #e5e7eb;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 700;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  width: 100%;
+  max-width: 460px;
+  transform: rotate(-2deg);
+}
+
+.section_btn-2:hover {
+  background-color: var(--primary-pink);
+  color: var(--secondary-white);
+  cursor: pointer;
+  width: 30%;
+}
+
+/* @media (min-width: 768px) {
+  .button-53 {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+} */
+
+/* Hero section mobile */
