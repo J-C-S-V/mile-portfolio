@@ -78,8 +78,8 @@ a {
     url('./assets/background.png');
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.2)
     ),
     url('./assets/background.png');
   background-size: cover;
