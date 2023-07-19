@@ -64,7 +64,7 @@ a {
   padding: 10px 40px;
 }
 
-.main {
+.header {
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -166,3 +166,29 @@ a {
 } */
 
 /* Hero section mobile */
+
+/* Main section */
+
+.article_video {
+  border: 1px solid var(--primary-white);
+}
+
+.main_section {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.main_article {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.main_h2 {
+  font-size: 3rem;
+  padding: 2rem 0;
+  text-align: center;
+}
